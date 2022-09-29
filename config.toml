@@ -1,0 +1,45 @@
+baseURL = 'https://daochook.github.io/'
+languageCode = 'en-us'
+title = 'daochook Documentation'
+theme = 'hugo-theme-learn'
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[params]
+editURL = "https://github.com/daochook/daochook.github.io/edit/main/content/"
+author = "atom0s"
+description = "Documentation website for the daochook project."
+showVisitedLinks = true
+disableSearch = false
+disableAssetsBusting = false
+disableInlineCopyToClipBoard = true
+disableShortcutsTitle = false
+disableLandingPageButton = false
+disableLanguageSwitchingButton = true
+disableBreadcrumb = false
+disableMermaid = true
+customMermaidURL = "https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"
+disableNextPrev = true
+ordersectionsby = "weight"
+themeVariant = "daochook"
+custom_css = []
+titleSeparator = "•"
+
+[[menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> Docs Repo"
+identifier = "docsrepo"
+url = "https://github.com/daochook/daochook.github.io"
+weight = 10
+
+[[menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> Releases Repo"
+identifier = "rlsrepo"
+url = "https://github.com/daochook/daochook"
+weight = 11
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> Credits"
+identifier = "credits"
+url = "/credits"
+weight = 12
