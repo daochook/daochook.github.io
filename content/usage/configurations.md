@@ -1,22 +1,10 @@
 ---
+menuTitle: "Configurations"
 title: "Configuring daochook"
-weight: 4
+weight: 1
 ---
 
 Once **daochook** is fully and properly installed, you are ready to begin configurations.
-
-### Launching daochook
-
-**daochook** expects a boot configuration file to be passed to its launcher when running, such as:
-
-```
-daochook.exe atom0s.ini
-```
-
-When the launcher starts, it will take the given file name and locate it within the boot configuration directory automatically.\
-The path to the **daochook** boot configuration directory is: `<Path To daochook>\config\boot\`
-
-You can create multiple _(as many as you want)_ configuration files for each character you wish to play on, or per-server if you wish to not use the auto-login functionality.
 
 ### Boot Configuration File Format
 
