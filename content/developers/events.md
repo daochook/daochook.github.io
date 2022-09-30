@@ -67,7 +67,6 @@ hook.events.register('load', 'load_cb', load_callback);
 If you need to register to an event multiple times, then you must pass a unique alias for each time you register to the event. For example:
 
 ```lua
-
 hook.events.register('load', 'load_cb1', function ()
     print('Load event was fired. (1)');
 end);

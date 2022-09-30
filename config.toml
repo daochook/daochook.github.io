@@ -3,6 +3,12 @@ languageCode = 'en-us'
 title = 'daochook Documentation'
 theme = 'hugo-theme-learn'
 
+[markup]
+  [markup.highlight]
+    lineNos = true
+    lineNumbersInTable = false
+    tabWidth = 4
+
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
 
