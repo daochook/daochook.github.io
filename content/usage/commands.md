@@ -16,6 +16,11 @@ Commands follow the below syntax for arguments:
 | `[arg]` | The argument is optional, a value is not required. |
 | `[arg...]` | The argument is optional, one or more values are allowed. |
 
+{{% notice info %}}
+This list does not include any commands implemented from an addon!\
+These are simply the commands built into **daochook** directly.
+{{% /notice %}}
+
 ### Command: `/addon`
 
   - `/addon load <name>`
