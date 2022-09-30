@@ -173,6 +173,10 @@ The list of values that this function can return are not intended for use by add
 
 Returns the game state pointer.
 
+```lua
+number game.get_game_state();
+```
+
 | Parameter Name | Type | Description |
 | --- | --- | --- |
 | _None._ | | |
@@ -186,6 +190,10 @@ Returns the game state pointer.
 #### `get_global_value`
 
 Calls a game function that is used to get a global numerical value.
+
+```lua
+number game.get_global_value(index);
+```
 
 | Parameter Name | Type | Description |
 | --- | --- | --- |
@@ -201,6 +209,10 @@ Calls a game function that is used to get a global numerical value.
 
 Calls a game function that is used to get an entity index by its object id.
 
+```lua
+number game.get_entity_index_by_objectid(object_id);
+```
+
 | Parameter Name | Type | Description |
 | --- | --- | --- |
 | `object_id` | _number_ | The entity object id to obtain the index of. |
@@ -214,6 +226,10 @@ Calls a game function that is used to get an entity index by its object id.
 #### `get_entity_string`
 
 Calls a game function that is used to return an entity related string.
+
+```lua
+string game.get_entity_string(table_index, entity_index);
+```
 
 | Parameter Name | Type | Description |
 | --- | --- | --- |
@@ -237,6 +253,10 @@ The table index values are:
 #### `exec_command`
 
 Calls the games input command handler, executing the given command.
+
+```lua
+game.exec_command(mode, imode, command);
+```
 
 | Parameter Name | Type | Description |
 | --- | --- | --- |
@@ -266,6 +286,10 @@ The command input mode values are:
 
 Calls the games output message handler, printing the given message to the chat/combat log(s).
 
+```lua
+game.add_message(mode, message);
+```
+
 | Parameter Name | Type | Description |
 | --- | --- | --- |
 | `mode`    | _number_ | The message mode. |
@@ -281,6 +305,10 @@ Calls the games output message handler, printing the given message to the chat/c
 
 Calls the games packet handler function, sending the given packet to the client as if the server sent it.
 
+```lua
+game.recv_packet(opcode, packet);
+```
+
 | Parameter Name | Type | Description |
 | --- | --- | --- |
 | `opcode` | _number_   | The packet opcode. |
@@ -295,6 +323,10 @@ Calls the games packet handler function, sending the given packet to the client 
 #### `send_packet`
 
 Calls the games packet send function, sending the given packet to the server as if the client sent it.
+
+```lua
+game.send_packet(opcode, packet, parameter);
+```
 
 | Parameter Name | Type | Description |
 | --- | --- | --- |
