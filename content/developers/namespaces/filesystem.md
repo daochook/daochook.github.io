@@ -9,6 +9,8 @@ These file system functions make use of the C++ `std::filesystem` header. The fu
 For more information on those functions, please visit: https://en.cppreference.com/w/cpp/filesystem
 {{% /notice %}}
 
+Functions exposed by this namespace are accessed via the prefix: `hook.fs.`
+
 ### Functions
 
 #### `create_directory`, `create_dir`

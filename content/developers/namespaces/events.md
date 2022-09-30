@@ -4,6 +4,8 @@ title: "events"
 
 The `events` namespace contains functions that are used for working with **daochook** events.
 
+Functions exposed by this namespace are accessed via the prefix: `hook.events.`
+
 ### Functions
 
 #### `register`
