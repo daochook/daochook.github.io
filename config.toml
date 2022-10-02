@@ -2,6 +2,7 @@ baseURL = 'https://daochook.github.io/'
 languageCode = 'en-us'
 title = 'daochook Documentation'
 theme = 'hugo-theme-learn'
+enableEmoji = true
 
 [markup]
   [markup.highlight]
@@ -32,20 +33,27 @@ themeVariant = "daochook"
 custom_css = []
 titleSeparator = "•"
 
+
 [[menu.shortcuts]]
-name = "<i class='fab fa-fw fa-github'></i> Docs Repo"
+name = "<i class='fa-brands fa-discord'></i> Discord Chat"
+identifier = "discord"
+url = "https://discord.gg/MtqPZJj5"
+weight = 10
+
+[[menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> Documentation Repo"
 identifier = "docsrepo"
 url = "https://github.com/daochook/daochook.github.io"
-weight = 10
+weight = 11
 
 [[menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> Releases Repo"
 identifier = "rlsrepo"
 url = "https://github.com/daochook/daochook"
-weight = 11
+weight = 12
 
 [[menu.shortcuts]]
 name = "<i class='fas fa-fw fa-bullhorn'></i> Credits"
 identifier = "credits"
 url = "/credits"
-weight = 12
+weight = 13
