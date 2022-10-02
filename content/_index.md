@@ -5,10 +5,28 @@ title: "Index"
 ![daochook](./images/daochook.png?width=64px)
 # daochook
 
+{{% button href="https://discord.gg/MtqPZJj5" icon="fa-brands fa-discord" %}}Discord Chat{{% /button %}}
+{{% button href="https://github.com/daochook/daochook" icon="fa-brands fa-github" %}}GitHub Repo{{% /button %}}
+{{% button href="https://github.com/daochook/daochook/issues" icon="fa-brands fa-github" %}}Bug Reports{{% /button %}}
+{{% button href="https://daochook.github.io/" icon="fa-solid fa-book" %}}Documentation{{% /button %}}
+
 ### What is `daochook`?
 
 **daochook** is a free feature-rich third-party enhancement/modification for the MMORPG, Dark Age of Camelot.\
 _(See the features page for a full list of **daochook's** features.)_
+
+### Support My Work
+
+Want to say thanks for **daochook**? Feel free to donate or sponsor me on the following platforms.
+
+{{% button href="" icon="fa-brands fa-github" %}}Sponsor via GitHub{{% /button %}}
+{{% button href="" icon="fa-brands fa-patreon" %}}Sponsor via Patreon{{% /button %}}
+{{% button href="" icon="fa-brands fa-paypal" %}}Donate via PayPal{{% /button %}}
+
+{{% notice note %}}
+**daochook** is released completely free of charge.\
+Donations and sponsorships are completely optional and are a means to say thanks.
+{{% /notice %}}
 
 ### How does `daochook` work?
 
