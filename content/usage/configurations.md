@@ -38,6 +38,21 @@ The import section is an optional feature that allows advanced users to create b
   - `disable_encryption` _(boolean)_ - Patch that will remove the packet encryption if enabled.
   - `disable_multi_instance_check` _(boolean)_ - Patch that will remove the multi-client instance check if enabled.
 
+##### Section: `[daochook.addons]`
+
+This configuration section is special. It does not require the typical key/value pairing and instead, only expects keys. Keys should be the name of addons that you wish to automatically load when the game client starts.
+
+For example, this section would look like this:
+
+```ini
+[daochook.addons]
+example
+fps
+move
+```
+
+This would automatically load the `example`, `fps` and `move` addon's when the game first starts.
+
 ### Example Boot Configuration File
 
 Here is a full example configuration file:
