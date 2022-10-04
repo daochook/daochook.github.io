@@ -5,16 +5,28 @@ weight: 2
 
 ### Launching daochook
 
-**daochook** expects a boot configuration file to be passed to its launcher when running, such as:
+**daochook** can be launched two different ways. Either by creating a new instance of the game client and injecting into it, or by injecting into an existing game client process. _It is recommended that you use **daochook** by injecting into a new client instance (which the injector will launch for you) for best results._
+
+When the injector starts, it will take the given file name and locate it within the boot configuration directory automatically.\
+The path to the **daochook** boot configuration directory is: `<Path To daochook>\config\boot\`
+
+_Be sure to read the [configurations documentation](/usage/configurations/) page for more information on how to configure **daochook**._
+
+#### New Process Injection
+
+You can launch and inject into a new process via the injector like so:
 
 ```
 daochook.exe atom0s.ini
 ```
 
-When the launcher starts, it will take the given file name and locate it within the boot configuration directory automatically.\
-The path to the **daochook** boot configuration directory is: `<Path To daochook>\config\boot\`
+#### Existing Process Injection
 
-_Be sure to read the [configurations documentation](/usage/configurations/) page for more information on how to configure **daochook**._
+You can inject into an existing process by passing the existing process id as a second parameter to the injector like so:
+
+```
+daochook.exe atom0s.ini 1234
+```
 
 ### Playing On Private Servers
 

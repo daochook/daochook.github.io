@@ -15,8 +15,15 @@ Because **daochook** is injected into the game client, it can hook onto the game
 The included injector also allows for quick login access using any version of the client that supports it.
 
 ```cpp
-// General Usage
-daochook.exe [configname.ini]
+// General Usage - (Create a new game process and inject..)
+daochook.exe [config_name.ini]
+
+// Advanced Usage - (Inject into an existing game process..)
+daochook.exe [config_name.ini] [process_id]
+
+// Examples
+daochook.exe atom0s.ini
+daochook.exe atom0s.ini 1234
 ```
 {{% /expand%}}
 
