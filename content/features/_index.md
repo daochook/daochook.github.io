@@ -76,6 +76,8 @@ During this chain, both **daochook** and/or an addon have the chance to alter an
 _This can also be used to modify incoming and outgoing packets, or out-right block packets from being sent or received!_
 {{% /expand%}}
 
+![hook_1.gif](/features/images/hook_1.gif)
+
 ### Direct3D Hook
 
 Along with hooking various game functions, **daochook** also hooks onto the games Direct3D device. This allows the hook to render its own things into the game scene, either in 2D or 3D. The main purpose for this however, is to allow the use of ImGui to render custom in-game UI elements from addons.
@@ -85,6 +87,9 @@ Along with hooking various game functions, **daochook** also hooks onto the game
 **daochook** implements and [fully] exposes ImGui to Lua for addons to make use of. You can easily create your own custom UI elements that can interact with the game directly, display useful / important game information, and much much more!
 
 You can find more information about ImGui here: [https://github.com/ocornut/imgui](https://github.com/ocornut/imgui)
+
+
+![imgui.gif](/features/images/imgui.gif)
 
 ### Addons, Powered By Lua!
 
@@ -127,3 +132,10 @@ end);
 ```
 
 _For full information on addons, please check the developer documentation section of this site!_
+
+### Window Modifications
+
+**daochook** modify the game window such that the icon is shown and overridden with the projects own icon. The window title is also automatically updated to your current characters name to make finding the proper game window when multiboxing much easier. It also allows third-party programs to interact with the game windows much easier as you can just use the window name to find the proper process if you are using certain older tools.
+
+![window_1.png](/features/images/window_1.png)
+![window_2.png](/features/images/window_2.png)
