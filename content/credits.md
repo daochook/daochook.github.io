@@ -48,3 +48,7 @@ The following VSCode extensions are used with the development of **daochook**:
 
   - **Hugo** - https://gohugo.io/ _(Static website generator.)_
     - **learn**: https://learn.netlify.app/en/ _(Theme for Hugo.)_
+
+### Other Credits
+
+  - **FlatIcon.com** & **Freepik.com** - _Viking icon used for the project, free of charge._

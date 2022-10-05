@@ -73,3 +73,5 @@ Please be sure you understand the license before making use of **daochook**. Thi
 ## Credits
 
 **daochook** is created and developed by [atom0s](https://github.com/atom0s).
+
+For a full list of credits, please visit: [daochook Credits](https://daochook.github.io/credits)
