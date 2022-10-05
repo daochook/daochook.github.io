@@ -37,7 +37,7 @@ titleSeparator = "•"
 [[menu.shortcuts]]
 name = "<i class='fa-brands fa-discord'></i> Discord Chat"
 identifier = "discord"
-url = "https://discord.gg/MtqPZJj5"
+url = "https://discord.gg/mkfP3XkZZ2"
 weight = 10
 
 [[menu.shortcuts]]

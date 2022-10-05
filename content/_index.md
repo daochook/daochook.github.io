@@ -5,7 +5,7 @@ title: "Index"
 ![daochook](./images/daochook.png?width=64px)
 # daochook
 
-{{% button href="https://discord.gg/MtqPZJj5" icon="fa-brands fa-discord" %}}Discord Chat{{% /button %}}
+{{% button href="https://discord.gg/mkfP3XkZZ2" icon="fa-brands fa-discord" %}}Discord Chat{{% /button %}}
 {{% button href="https://github.com/daochook/daochook" icon="fa-brands fa-github" %}}GitHub Repo{{% /button %}}
 {{% button href="https://github.com/daochook/daochook/issues" icon="fa-brands fa-github" %}}Bug Reports{{% /button %}}
 {{% button href="https://daochook.github.io/" icon="fa-solid fa-book" %}}Documentation{{% /button %}}
