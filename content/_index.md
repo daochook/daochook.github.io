@@ -19,9 +19,9 @@ _(See the features page for a full list of **daochook's** features.)_
 
 Want to say thanks for **daochook**? Feel free to donate or sponsor me on the following platforms.
 
-{{% button href="" icon="fa-brands fa-github" %}}Sponsor via GitHub{{% /button %}}
-{{% button href="" icon="fa-brands fa-patreon" %}}Sponsor via Patreon{{% /button %}}
-{{% button href="" icon="fa-brands fa-paypal" %}}Donate via PayPal{{% /button %}}
+{{% button href="https://github.com/atom0s" icon="fa-brands fa-github" %}}Sponsor via GitHub{{% /button %}}
+{{% button href="https://patreon.com/atom0s" icon="fa-brands fa-patreon" %}}Sponsor via Patreon{{% /button %}}
+{{% button href="https://www.paypal.me/atom0s" icon="fa-brands fa-paypal" %}}Donate via PayPal{{% /button %}}
 
 {{% notice note %}}
 **daochook** is released completely free of charge.\

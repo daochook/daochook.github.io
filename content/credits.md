@@ -6,9 +6,9 @@ title: "Credits"
 
 You can support my work via the following:
 
-{{% button href="" icon="fa-brands fa-github" %}}Sponsor via GitHub{{% /button %}}
-{{% button href="" icon="fa-brands fa-patreon" %}}Sponsor via Patreon{{% /button %}}
-{{% button href="" icon="fa-brands fa-paypal" %}}Donate via PayPal{{% /button %}}
+{{% button href="https://github.com/atom0s" icon="fa-brands fa-github" %}}Sponsor via GitHub{{% /button %}}
+{{% button href="https://patreon.com/atom0s" icon="fa-brands fa-patreon" %}}Sponsor via Patreon{{% /button %}}
+{{% button href="https://www.paypal.me/atom0s" icon="fa-brands fa-paypal" %}}Donate via PayPal{{% /button %}}
 
 The following page is dedicated to the various tools and third-party projects / libraries that **daochook** makes use of.
 
