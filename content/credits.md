@@ -6,7 +6,7 @@ title: "Credits"
 
 You can support my work via the following:
 
-{{% button href="https://github.com/atom0s" icon="fa-brands fa-github" %}}Sponsor via GitHub{{% /button %}}
+{{% button href="https://github.com/sponsors/atom0s" icon="fa-brands fa-github" %}}Sponsor via GitHub{{% /button %}}
 {{% button href="https://patreon.com/atom0s" icon="fa-brands fa-patreon" %}}Sponsor via Patreon{{% /button %}}
 {{% button href="https://www.paypal.me/atom0s" icon="fa-brands fa-paypal" %}}Donate via PayPal{{% /button %}}
 
