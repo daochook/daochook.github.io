@@ -49,69 +49,18 @@ For more information on compiled libraries, please check Lua's documentation her
 
 **daochook** comes with the following included libraries:
 
+_Click the library file name to open more information specific to that library._
+
 | Library File Name | Usage | Description |
 | --- | --- | --- |
-| `common.lua`      | `require 'common';`       | Library that includes the various other commonly used lib files. _(It is recommended that your addon includes this!)_ |
-| `daoc.lua`        | `local daoc = require 'daoc';` | Library that adds game specific functions and information. _(This library automatically detects your client version and includes the additional libs found within the `/addons/libs/daoc/` folder.)_ |
-| `imgui.lua`       | `require 'imgui';`        | Library that adds ImGui related functions and information. |
-| `json.lua`        | `require 'json';`         | Library that adds JSON file reading/writing function support. |
-| `mimie.lua`       | `require 'mimie';`        | Library used with LuaSocket; defines common web mime types and functionality. |
-| `socket.lua`      | `require 'socket';`       | Library used to work with sockets and web requests. |
-| `sugar.lua`       | `require 'sugar';`        | Library that _greatly_ expands Lua's base types to add a lot of functional programming features to Lua. |
-| `switch.lua`      | `require 'switch';`       | Library that adds a switch-case helper function to Lua. |
-| `win32types.lua`  | `require 'win32types';`   | Library that defines common Win32 types with FFI. |
-
-### `daoc` Library
-
-The `daoc` (Dark Age of Camelot) library is used to add game related functionality and information. The main library file will automatically determine your client version, then include the additional version-specific sub-library files found within the `/addons/libs/daoc/` folder. These sub folders are separate into client versions to ensure that the functionality will work on as many clients as possible. It's also easy to add support for other client versions by simply making a copy of an existing folder and updating the function information and pointers appropriately.
-
-This library contains helper functions for interacting with various parts of the game client and its memory/information as well as wrappers to directly call game functions via LuaJIT's FFI library.
-
-### `sugar` Library
-
-The `sugar` library is a lib made by `atom0s` that adds a ton of functional programming helper extensions to the various core objects of Lua.
-
-Sugar includes new functions for the following types and tables:
-
-  - `boolean`
-  - `function`
-  - `math`
-  - `number`
-  - `nil`
-  - `string`
-  - `table`
-
-**Note:** While `sugar` does offer a lot of functionality for Lua tables, it is not enabled by default for all table objects. Instead, you will either need to convert your table to a metatable-enabled one, or create it as one. You can do that easily by using the following syntax instead when creating tables:
-
-```lua
--- Normal table..
-local t = { };
-
--- Sugar enhanced table..
-local t = T{ };
-```
-
-When you create a `sugar` enhanced table, this enables all of `sugar`'s features that are extending the metatable of the table object.
-
-Here is an example:
-
-```lua
--- Normal Lua table usage example..
-local t = { };
-table.insert(t, 2);
-table.insert(t, 3);
-table.insert(t, 1);
-table.sort(t);
-
-for k, v in pairs (t) do print(v); end
-
--- Sugar enhanced table usage example..
-local t = T{ };
-t:insert(2);
-t:insert(3);
-t:insert(1);
-t:sort();
-t:each(function (v) print(v); end);
-```
-
-_Sugar is very powerful in how much it can allow you to transform normal Lua code into a functional programming syntax._
+| [`common.lua`](common)          | `require 'common';`                     | Library that includes the various other commonly used lib files. _(It is recommended that your addon includes this!)_ |
+| [`daoc.lua`](daoc)              | `require 'daoc';`                       | Library that adds game specific functions and information. _(This library automatically detects your client version and includes the additional libs found within the `/addons/libs/daoc/` folder.)_ |
+| [`imgui.lua`](imgui)            | `local imgui = require 'imgui';`        | Library that adds ImGui related functions and information. |
+| [`json.lua`](json)              | `require 'json';`                       | Library that adds JSON file reading/writing function support. |
+| [`mime.lua`](mime)              | `require 'mimie';`                      | Library used with LuaSocket; defines common web mime types and functionality. |
+| [`settings.lua`](settings)      | `local settings = require 'settings';`  | Library that can be used for per-character configuration settings in your addon. |
+| [`socket.lua`](socket)          | `require 'socket';`                     | Library used to work with sockets and web requests. |
+| [`sugar.lua`](sugar)            | `require 'sugar';`                      | Library that _greatly_ expands Lua's base types to add a lot of functional programming features to Lua. |
+| [`switch.lua`](switch)          | `require 'switch';`                     | Library that adds a switch-case helper function to Lua. |
+| [`trycatch.lua`](trycatch)      | `require 'trycatch';`                   | Library that adds try/catch/finally style support in Lua via `xpcall`. |
+| [`win32types.lua`](win32types)  | `require 'win32types';`                 | Library that defines common Win32 types with FFI. |
