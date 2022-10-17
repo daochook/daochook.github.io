@@ -44,6 +44,33 @@ The following VSCode extensions are used with the development of **daochook**:
     - **openssl**: https://github.com/openssl/openssl _(Library used for SSL.)_
   - **sol3**: https://github.com/ThePhD/sol2 _(Lua wrapper library.)_
 
+### Sugar Library Credits
+
+The Sugar Lua library is made by [`atom0s`](https://github.com/atom0s/) and is inspired by similar functional programming libraries for Lua:
+
+  - **Metatable Abuse**
+    - http://lua-users.org/wiki/MethodChainingWrapper
+    - https://gist.github.com/gvx/2277797
+    - https://gist.github.com/remyroez/baa67504e7fcdea405465b2f5a68b0b3
+    - https://stackoverflow.com/a/33990997
+  - **Functional Lua**
+    - https://github.com/lunarmodules/Penlight
+    - https://github.com/stevedonovan/Microlight
+    - https://github.com/luafun/luafun
+    - https://github.com/Yonaba/Moses
+    - https://github.com/mirven/underscore.lua
+    - https://github.com/siffiejoe/lua-fx
+    - With additional inspiration from other language projects such as: Underscore.js, Lodash.js, Ramda.js, Sugar.js, Mout.js, Rx.js
+  - **Misc References**
+    - https://github.com/lua-nucleo/lua-nucleo
+    - https://github.com/lua-stdlib/lua-stdlib
+    - https://github.com/Yonaba/Allen
+    - https://github.com/torch/xlua
+    - https://github.com/timruffles/romans
+    - https://stackoverflow.com/a/32660766
+    - https://riptutorial.com/lua
+    - https://github.com/bjc/prosody/tree/master/util
+
 ### Documentation Credits
 
   - **Hugo** - https://gohugo.io/ _(Static website generator.)_
