@@ -5,21 +5,28 @@ disableToc: false
 chapter: false
 ---
 
-Because **daochook** is injected into the game client, it can hook onto the game in various ways. This allows for many features that are not generally possible with just external tools alone. Check out the various features of **daochook** below for more information.
+![daochook](./../images/daochook.png?width=64px)
 
-### Custom Launcher (Injector)
+**daochook** offers an enhanced player experience by providing a feature-rich platform to work from. Below you can find an overview of the projects main features. _Please note, because **daochook** offers a very in-depth Lua addon interface, the feature-set of the project is endless and ever-expanding by users sharing addons!_
 
-**daochook** ships with its own basic command line injector/launcher. This is to ensure that **daochook** is injected properly and as soon as possible in the launching of the game client. _(Other injectors are supported as long as they are able to call exported functions.)_
+### Custom Injector / Launcher
+
+**daochook** ships with its own command line injector/launcher. This allows the project to ensure it is properly launched, injected and ran as expected. The launcher is designed to be easy to use and understand by anyone. The launcher also supports two forms of injecting into the game client.
+
+  - By injecting into a new process. _(Launched by the injector itself.)_
+  - By injecting into an existing process.
+
+_You may use another injector/launcher if you wish, however that launcher must properly invoke **daochook**'s installation export function. If you are working on a custom injector for **daochook** and need help with this, please contact `atom0s` on the Discord server._
 
 {{%expand "Click to read more..." %}}
 The included injector also allows for quick login access using any version of the client that supports it.
 
 ```cpp
 // General Usage - (Create a new game process and inject..)
-daochook.exe [config_name.ini]
+daochook.exe <config_name.ini>
 
 // Advanced Usage - (Inject into an existing game process..)
-daochook.exe [config_name.ini] [process_id]
+daochook.exe <config_name.ini> [process_id]
 
 // Examples
 daochook.exe atom0s.ini
@@ -29,9 +36,7 @@ daochook.exe atom0s.ini 1234
 
 ### Injected Hook
 
-As previously mentioned, **daochook** is injected directly into the game client (`game.dll`). This gives the project an advantage over other external third-party tools as it can directly access the games data, memory and functions.
-
-**daochook** also hooks onto the games Direct3D device to allow for custom rendering and additional rendering related features. _(See below for more info.)_
+**daochook** operates by being directly injected into the game client (`game.dll`) process. This gives the project several advantages over standard external third-party tools. By being directly injected, **daochook** can directly access the games memory, functions, and other data. It can also easily hook and/or patch the game client in various ways. **daochook** makes use of this by hooking onto several game functions to greatly enhance the client and expose information to addons. _(See more information below!)_
 
 ### Hooked Game Functions
 
@@ -87,14 +92,31 @@ _This can also be used to modify incoming and outgoing packets, or out-right blo
 
 ### Direct3D Hook
 
-Along with hooking various game functions, **daochook** also hooks onto the games Direct3D device. This allows the hook to render its own things into the game scene, either in 2D or 3D. The main purpose for this however, is to allow the use of ImGui to render custom in-game UI elements from addons.
+Along with hooking various game functions, **daochook** also hooks onto the games Direct3D device. This allows the hook to render its own things into the game scene, either in 2D or 3D. The main purpose for this however, is to allow the use of ImGui to render custom in-game UI elements from addons. By hooking the Direct3D interface, it is also possible to alter how the scene renders, helping clean up visibility in various conditions.
+
+#### Toggling The Game Fog Rendering
+
+![d3d_fog.png](/features/images/d3d_fog.png)
+
+_The games fog can be toggled on and off with a simple slash command._
+
+#### Altering The Game Ambient Light Rendering
+
+![d3d_ambient.png](/features/images/d3d_ambient.png)
+
+_The games ambient lighting can be toggled on and off, and overridden with a custom color allowing you to see easier in the dark or if your system has a hard time displaying darker areas._
+
+#### Toggling The Z-Buffer Rendering
+
+![d3d_zbuffer.png](/features/images/d3d_zbuffer.png)
+
+_The game z-buffer can be toggled on and off with a simple slash command, making it possible to see through walls._ _(**Note:** This does not allow you to target or cast through walls! Collision and obstruction still works as normal.)_
 
 ### Custom UI via ImGui
 
 **daochook** implements and [fully] exposes ImGui to Lua for addons to make use of. You can easily create your own custom UI elements that can interact with the game directly, display useful / important game information, and much much more!
 
 You can find more information about ImGui here: [https://github.com/ocornut/imgui](https://github.com/ocornut/imgui)
-
 
 ![imgui.gif](/features/images/imgui.gif)
 
@@ -142,7 +164,27 @@ _For full information on addons, please check the developer documentation sectio
 
 ### Window Modifications
 
-**daochook** modify the game window such that the icon is shown and overridden with the projects own icon. The window title is also automatically updated to your current characters name to make finding the proper game window when multiboxing much easier. It also allows third-party programs to interact with the game windows much easier as you can just use the window name to find the proper process if you are using certain older tools.
+**daochook** modifies the game window such that the icon is shown and overridden with the projects own icon. The window title is also automatically updated to your current characters name to make finding the proper game window when multiboxing much easier. _It also allows third-party programs to interact with the game windows much easier as you can just use the window name to find the proper process if you are using certain older tools._
 
-![window_1.png](/features/images/window_1.png)
-![window_2.png](/features/images/window_2.png)
+#### Custom Window Title Override
+
+![window_title.gif](/features/images/window_title.gif)
+
+#### Custom Window Icon Override
+
+_Overridding the window icon and taskbar icons.._
+![window_icon1.png](/features/images/window_icon1.png)
+
+_Overridding the ALT+Tab window icon.._
+
+![window_icon2.png](/features/images/window_icon2.png)
+
+### Custom `user.dat` Override Fix
+
+Long time players will know the bug dealing with the `user.dat` file and all the headaches it can cause. Crashing while multiboxing can lead to tons of undesired downtime due to having to micro-manage numerous accounts after a crash. **daochook** includes a custom patch/fix for this problem. When enabled, **daochook** will override the path that the game attempts to look for your `user.dat` file, making it individual per-account. This means that each account can easily have its own settings without interferring with another client.
+
+These custom overrides are stored in: `<daochook_path>\config\daoc\<account_name>\user.dat`
+
+_You can easily copy your existing user.dat file(s) into the proper folders based on your account names or allow the client to create a new one for each account you log into with this setting turned on._
+
+No longer do you need to juggle accounts after one crashes to avoid losing all your characters settings!
