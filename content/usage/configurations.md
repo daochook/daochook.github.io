@@ -37,6 +37,7 @@ The import section is an optional feature that allows advanced users to create b
 
   - `disable_encryption` _(boolean)_ - Patch that will remove the packet encryption if enabled.
   - `disable_multi_instance_check` _(boolean)_ - Patch that will remove the multi-client instance check if enabled.
+  - `override_user_dat` _(boolean)_ - Patch that will override the `user.dat` location to be account-specific.
 
 ##### Section: `[daochook.addons]`
 
@@ -76,6 +77,7 @@ realm= 2
 [daochook.patches]
 disable_encryption = 1
 disable_multi_instance_check = 1
+override_user_dat = 1
 ```
 
 ### Import Usage Example
@@ -95,6 +97,7 @@ id= 42
 [daochook.patches]
 disable_encryption = 1
 disable_multi_instance_check = 1
+override_user_dat = 1
 ```
 
 `<Path To daochook>\boot\config\atom0s1.ini`:
