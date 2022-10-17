@@ -6,7 +6,47 @@ weight: 4
 
 **daochook** includes a handful of various helper functions that are exposed to each addons Lua state. These functions are separated into namespaces that make it cleaner and easier to read when being accessed. Below is a table of each of the namespaces that are exposed from **daochook**.
 
-_**Note:** This page does not include the additional functions created by or added to the given namespaces via the included addon `libs`. Those have their own documentation pages._
+### Functions (Globals)
+
+#### `print`
+
+Overridden from the stock Lua print functionality. Instead, calling print will print the given message to the games chat window using the default message mode. `(1)`
+
+```lua
+print(...);
+```
+
+| Parameter Name | Type | Description |
+| --- | --- | --- |
+| `...` | `string` | The message(s) to print. |
+
+| Returns |
+| --- |
+| _None._ |
+
+---
+
+#### `dbgprint`
+
+Debug print helper. Prints the given message to the system debug stream.
+
+```lua
+dbgprint(...);
+```
+
+| Parameter Name | Type | Description |
+| --- | --- | --- |
+| `...` | `string` | The message(s) to print. |
+
+| Returns |
+| --- |
+| _None._ |
+
+_To view these messages, use a tool such as DbgView, DbgView++ or similar._
+
+---
+
+### Namespaces
 
 _Click the namespace name to go to that namespaces individual documentation page._
 
